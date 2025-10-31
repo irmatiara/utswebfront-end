@@ -176,16 +176,19 @@ body {
 
 .btnKembali {
     display: inline-block;
-    background-color: #007BFF;
-    color: white;
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    font-weight: 500;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.btnKembali:hover {
+    background-color: #007BFF;
+    color: white;
 }
 
 
