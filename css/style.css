@@ -58,13 +58,13 @@ body {
 
 /* === Hero === */
 .hero {
-    height: 85vh;
+    height: 60vh;
     background-color: #f5ecde;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 2rem;
+    text-align: left;
+    padding: 10rem;
 }
 
 .hero h1 {
@@ -101,6 +101,24 @@ body {
     text-align: center;
 }
 
+#tentang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.section-tentang {
+    flex: 1;
+    padding: 5rem;
+}
+
+.section-tentang h2 {
+    flex: 1;
+    font-size: 2.5rem;
+    margin-bottom: 3px;
+}
+
 .section h2 {
     font-size: 2rem;
     margin-bottom: 1.1rem;
@@ -112,7 +130,31 @@ body {
 }
 
 .light-bg {
-    background-color: #f8f9fa;
+    background-color: #f5ecde;
+    flex-wrap: wrap;
+}
+
+#tentang img {
+    width: 40%;
+    max-width: 350px;
+    margin-left: 30px;
+    order: -1;
+}
+
+#tentang2 img {
+    width: 40%;
+    max-width: 350px;
+    margin-right: 50px;
+    order: 2;
+}
+
+#tentang2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #fffbf8;
+    flex-wrap: wrap;
 }
 
 /* === Cards === */
@@ -161,6 +203,7 @@ body {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .card-body p {
@@ -204,9 +247,32 @@ body {
 /* === Footer === */
 .footer {
     background: #0f0f0f;
-    color: #2E4365;
+    color: #f0f0f0;
     text-align: center;
     padding: 1rem 0;
+}
+
+.icon {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon i {
+    font-size: 28px;
+    background-color: #2E4365;
+    color: #F3D58D;
+    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-text p {
+    margin: 0 0 5px 0;
 }
 
 /* === Responsif === */
