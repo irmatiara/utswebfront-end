@@ -251,19 +251,3 @@ body {
     text-align: center;
     padding: 1rem 0;
 }
-
-/* === Responsif === */
-@media (max-width: 900px) {
-    .card {
-        flex: 1 1 calc(50% - 1.5rem);
-        max-width: calc(50% - 1.5rem);
-    }
-}
-
-@media (max-width: 600px) {
-    .card {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-

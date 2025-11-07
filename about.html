@@ -5,15 +5,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThinkLyttleStars</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* === Responsif === */
+        @media (max-width: 900px) {
+            .card {
+                flex: 1 1 calc(50% - 1.5rem);
+                max-width: calc(50% - 1.5rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: block;
+                cursor: pointer;
+            }
+            .burger-menu .bar {
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                background-color: #F3D58D;
+            }
+            .burger-menu.toggle .bar:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .burger-menu.toggle .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .burger-menu.toggle .bar:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                left: -100%;
+                background-color: #2E4365;
+                width: 100%;
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.5rem 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .nav-links.active {
+                left: 0;
+            }
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links a {
+                display: block;
+                width: 90%;
+                margin: auto;
+            }
+
+            .hero {
+                flex-direction: column;
+                height: auto;
+                padding: 4rem 1.5rem 3rem 1.5rem;
+                text-align: center;
+            }
+            .hero img {
+                width: 70%;
+                max-width: 250px;
+                margin-bottom: 1.5rem;
+                order: -1;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+            #tentang {
+                flex-direction: column;
+                padding: 2rem 1.5rem !important;
+                text-align: center;
+            }
+            #tentang img {
+                order: -1 !important;
+                margin-left: 0 !important; 
+                margin-bottom: 1.5rem;
+                width: 70%;
+                max-width: 250px;
+            }
+            .section-tentang {
+                padding: 0 !important;
+            }
+
+            #tentang2 {
+                padding: 2rem 1.5rem !important;
+            }
+            
+            #tentang2 > table > tbody > tr {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #tentang2 > table > tbody > tr > td {
+                width: 100% !important;
+                display: block;
+                text-align: center;
+            }
+
+            #tentang2 img {
+                width: 80% !important;
+                max-width: 300px;
+                height: auto;
+                margin-top: 2.5rem !important;
+            }
+            
+            #tentang2 table table {
+                margin-left: 0 !important;
+                width: 100% !important;
+                border-spacing: 0 1rem;
+            }
+
+            #tentang2 table table tr {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+                text-align: left;
+            }
+            
+            #tentang2 table table td {
+                padding: 0;
+                margin: 0;
+                width: auto !important;
+            }
+            
+            #tentang2 table table td:first-child {
+                width: 50px !important;
+                flex-shrink: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <img class="logo" src="assets/logo.svg" alt="" srcset="">
+
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="index.html#artikel">Artikel</a></li>
@@ -129,6 +276,16 @@
     <footer class="footer">
         <p>© 2025 ThinkLyttleStars.</p>
     </footer>
+
+    <script>
+        // script untuk hamburger menu
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burgerMenu.classList.toggle('toggle');
+        });
+    </script>
 </body>
 
 </html>

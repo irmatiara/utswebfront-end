@@ -28,6 +28,7 @@
                 margin: 5px auto;
                 background-color: #F3D58D;
             }
+
             .nav-links {
                 position: absolute;
                 top: 60px;
@@ -40,6 +41,7 @@
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 /* transition: left 0.3s ease-in-out; */
             }
+
             .nav-links.active {
                 left: 0;
             }
@@ -87,6 +89,7 @@
                 flex: 1 1 100%;
                 max-width: 100%;
             }
+
             #kontak form {
                 width: 100%;
                 padding: 0 1rem;
@@ -120,29 +123,21 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Beranda</a></li>
-                <li><a href="index.html#artikel">Artikel</a></li>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="artikel.html" class="active">Artikel</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="index.html#kontak">Kontak</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="assets/1.png" alt="" srcset="">
-        <div class="hero-content">
-            <h1>Belajar Teknologi Jadi Mudah</h1>
-            <p>ThinkLyttleStars adalah ruang belajar yang sederhana dan ramah, di mana setiap artikel membantu kamu
-                memahami dunia digital dengan cara yang ringan.
-                Nggak perlu waktu lama, cukup luangkan beberapa menit untuk membaca dan kamu akan mendapat wawasan baru
-                yang bermanfaat untuk keseharianmu.</p>
-        </div>
-    </section>
-
-    <!-- Artikel Section -->
     <section id="artikel" class="section">
-        <h2 style="padding-bottom: 30px;">Artikel Populer</h2>
+        <h2>Artikel Populer</h2>
+        <p style="max-width: 800px; margin: 0 auto; margin-bottom: 50px; line-height: 1.6;">
+            Temukan berbagai artikel menarik seputar teknologi, pemrograman, dan perkembangan dunia digital.
+            Mulai dari pengenalan Artificial Intelligence hingga panduan belajar bahasa pemrograman populer
+            seperti Python, JavaScript, dan HTML. Cocok untuk kamu yang ingin memperluas wawasan di era digital!
+        </p>
         <div class="card-grid">
             <div class="card">
                 <img src="assets/ai (2).jfif" alt="AI">
@@ -168,34 +163,32 @@
                     <a href="index_internet.html" class="btn-outline">Baca Selengkapnya</a>
                 </div>
             </div>
-            <a href="artikel.html" class="btn-outline" style="margin-left: auto; display: block; width: fit-content;">Artikel Lainnya</a>
+            <div class="card">
+                <img src="assets/py.jfif" alt="Coding">
+                <div class="card-body">
+                    <h3>Mengenal Python lebih dalam</h3>
+                    <p>Mengapa Python menjadi pilihan favorit para pengembang dalam teknologi modern di seluruh dunia.
+                    </p>
+                    <a href="index_python.html" class="btn-outline">Baca Selengkapnya</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/java.jfif" alt="Internet">
+                <div class="card-body">
+                    <h3>JavaScript itu apa sih?</h3>
+                    <p>Kuasai bahasa pemrograman web paling populer untuk membuat halaman kamu menjadi interaktif dan dinamis!</p>
+                    <a href="index_javascript.html" class="btn-outline">Baca Selengkapnya</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/dtsains.jfif" alt="Internet">
+                <div class="card-body">
+                    <h3>Langkah Awal Belajar Data Science</h3>
+                    <p>Mengenali dan memahami keterampilan dasar data science yang perlu dikuasai sebelum memulai.</p>
+                    <a href="index_data.html" class="btn-outline">Baca Selengkapnya</a>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <!-- Kontak Section -->
-    <section id="kontak" class="section">
-        <h2>Contact Us</h2>
-        <form name="contact-form"
-            style="display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 15px;">
-            <div style="display: flex;align-items: center;justify-content: space-between;width: 400px;">
-                <label for="name" style="font-size: 1.1rem;">Nama Lengkap</label>
-                <input type="text" id="name" name="nama"
-                    style="width: 250px;padding: 8px 10px;border: 1px solid #ccc;border-radius: 4px;font-size: 1rem;" />
-            </div>
-            <div style="display: flex;align-items: center;justify-content: space-between;width: 400px;">
-                <label for="email" style="font-size: 1.1rem;">Email</label>
-                <input type="email" id="email" name="email"
-                    style="width: 250px;padding: 8px 10px;border: 1px solid #ccc;border-radius: 4px;font-size: 1rem;" />
-            </div>
-            <div style="display: flex;align-items: center;justify-content: space-between;width: 400px;">
-                <label for="pesan" style="font-size: 1.1rem;">Pesan</label>
-                <textarea id="pesan" name="pesan" rows="3"
-                    style="width: 250px;padding: 8px 10px;border: 1px solid #ccc;border-radius: 4px;font-size: 1rem;resize: none;"></textarea>
-            </div>
-            <button type="submit" class="btn-primary">
-                Kirim
-            </button>
-        </form>
     </section>
 
     <!-- Footer -->
@@ -204,9 +197,6 @@
     </footer>
 
     <script>
-        const form = document.forms['contact-form']
-        form.reset(); // mengosongkan form
-
         // script untuk hamburger menu
         const burgerMenu = document.querySelector('.burger-menu');
         const navLinks = document.querySelector('.nav-links');
