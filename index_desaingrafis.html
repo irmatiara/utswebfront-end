@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,116 +31,140 @@
       color: var(--text);
     }
 
+    .btnKembali {
+        display: inline-block;
+        max-width: 200px; /* maksimal lebar */
+        width: auto; /* agar lebar sesuai isi */
+        background-color: #F3D58D;
+        color: #2E4365;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+        margin-top: 1rem;
+    }
+
+
+    .btnKembali:hover {
+        background-color: #2E4365;
+        color: #F3D58D;
+    }
+
     /* NAVBAR */
-    /* NAVBAR */
-.navbar {
-  background: var(--text);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-}
+    .navbar {
+      background: var(--text);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+    }
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-  min-height: 64px;
-  padding: 0.5rem 0;
-  flex-wrap: wrap; /* biar bisa turun ke bawah saat layar kecil */
-  gap: 10px;
-}
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      min-height: 64px;
+      padding: 0.5rem 0;
+      flex-wrap: wrap;
+      /* biar bisa turun ke bawah saat layar kecil */
+      gap: 10px;
+    }
 
-.logo {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-}
+    .logo {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
 
-/* JUDUL NAVBAR */
-.nav-title {
-  color: #f6e5bb;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  flex: 1;
-  min-width: 180px;
-}
+    /* JUDUL NAVBAR */
+    .nav-title {
+      color: #f6e5bb;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+    }
 
-/* MENU NAVIGATION */
-.nav-links {
-  display: flex;
-  gap: 0.8rem;
-  list-style: none;
-}
+    /* MENU NAVIGATION */
+    .nav-links {
+      display: flex;
+      gap: 0.8rem;
+      list-style: none;
+    }
 
-.nav-links a {
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  color: var(--accent);
-  text-decoration: none;
-  transition: 0.2s;
-}
+    .nav-links a {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      transition: 0.2s;
+    }
 
-.nav-links a:hover,
-.nav-links .active {
-  background: hsl(42, 81%, 75%);
-  color: var(--text);
-}
+    .nav-links a:hover,
+    .nav-links .active {
+      background: hsl(42, 81%, 75%);
+      color: var(--text);
+    }
 
-/* RESPONSIVE FIX */
-@media (max-width: 900px) {
-  .navbar-container {
-    flex-direction: column; /* logo, judul, dan menu jadi vertikal */
-    align-items: center;
-    gap: 6px;
-  }
+    /* RESPONSIVE FIX */
+    @media (max-width: 900px) {
+      .navbar-container {
+        flex-direction: column;
+        /* logo, judul, dan menu jadi vertikal */
+        align-items: center;
+        gap: 6px;
+      }
 
-.nav-title {
-  color: #f6e5bb;
-  font-size: 28px;          /* besar di laptop/desktop */
-  font-weight: 700;
-  text-align: center;
-  flex: 1;
-  letter-spacing: 1px;
-}
+      .nav-title {
+        color: #f6e5bb;
+        font-size: 28px;
+        /* besar di laptop/desktop */
+        font-weight: 700;
+        text-align: center;
+        flex: 1;
+        letter-spacing: 1px;
+      }
 
-@media (max-width: 900px) {
-  .nav-title {
-    font-size: 20px;        /* sedikit lebih kecil di HP */
-  }
-}
+      @media (max-width: 900px) {
+        .nav-title {
+          font-size: 20px;
+          /* sedikit lebih kecil di HP */
+        }
+      }
 
 
-  .nav-links {
-    order: 3;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+      .nav-links {
+        order: 3;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-  .logo {
-    order: 1;
-    height: 50px;
-  }
+      .logo {
+        order: 1;
+        height: 50px;
+      }
 
-  /* Sidebar & Konten */
-  .container {
-    flex-direction: column;
-  }
+      /* Sidebar & Konten */
+      .container {
+        flex-direction: column;
+      }
 
-  aside {
-    width: 100%;
-    order: 2;
-  }
+      aside {
+        width: 100%;
+        order: 2;
+      }
 
-  main {
-    order: 1;
-  }
-}
+      main {
+        order: 1;
+      }
+    }
 
     /* KONTEN UTAMA */
     .container {
@@ -253,6 +278,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -281,8 +307,12 @@
     <main>
       <section id="pengertian">
         <h2>Pengertian Desain Grafis</h2>
-        <p>Desain grafis adalah proses komunikasi visual menggunakan elemen seperti teks, gambar, warna, dan bentuk untuk menyampaikan pesan secara efektif. 
-        Tujuannya bukan hanya estetika, tetapi juga kejelasan informasi dan kekuatan pesan visual. Desain Grafis juga seni komunikasi visual yang menggunakan elemen seperti gambar, teks, warna, dan tata letak untuk menyampaikan pesan secara efektif dan menarik. Proses ini menggabungkan seni dan teknologi untuk menciptakan konten visual bagi berbagai media, mulai dari identitas merek, iklan, hingga desain situs web dan media sosial.</p>
+        <p>Desain grafis adalah proses komunikasi visual menggunakan elemen seperti teks, gambar, warna, dan bentuk
+          untuk menyampaikan pesan secara efektif.
+          Tujuannya bukan hanya estetika, tetapi juga kejelasan informasi dan kekuatan pesan visual. Desain Grafis juga
+          seni komunikasi visual yang menggunakan elemen seperti gambar, teks, warna, dan tata letak untuk menyampaikan
+          pesan secara efektif dan menarik. Proses ini menggabungkan seni dan teknologi untuk menciptakan konten visual
+          bagi berbagai media, mulai dari identitas merek, iklan, hingga desain situs web dan media sosial.</p>
       </section>
 
       <section id="tujuan">
@@ -332,13 +362,19 @@
 
       <section id="kesimpulan">
         <h2>Kesimpulan</h2>
-        <p>Desain grafis adalah perpaduan antara seni dan komunikasi visual yang berperan penting dalam menyampaikan pesan secara efektif dan menarik.
-Melalui pemahaman terhadap elemen (seperti warna, bentuk, tipografi) dan prinsip desain (seperti keseimbangan, kontras, dan kesatuan), 
-seorang desainer dapat menciptakan karya yang tidak hanya indah secara visual, tetapi juga memiliki makna dan tujuan yang jelas.</p>
+        <p>Desain grafis adalah perpaduan antara seni dan komunikasi visual yang berperan penting dalam menyampaikan
+          pesan secara efektif dan menarik.
+          Melalui pemahaman terhadap elemen (seperti warna, bentuk, tipografi) dan prinsip desain (seperti keseimbangan,
+          kontras, dan kesatuan),
+          seorang desainer dapat menciptakan karya yang tidak hanya indah secara visual, tetapi juga memiliki makna dan
+          tujuan yang jelas.</p>
 
-<p>Dalam dunia modern, desain grafis menjadi bagian vital di berbagai bidang — mulai dari branding, media sosial, hingga desain digital.
-Dengan kreativitas dan pemahaman konsep yang tepat, desain grafis mampu mempengaruhi persepsi, membangun identitas, serta memperkuat komunikasi antara pesan dan audiens.</p>
+        <p>Dalam dunia modern, desain grafis menjadi bagian vital di berbagai bidang — mulai dari branding, media
+          sosial, hingga desain digital.
+          Dengan kreativitas dan pemahaman konsep yang tepat, desain grafis mampu mempengaruhi persepsi, membangun
+          identitas, serta memperkuat komunikasi antara pesan dan audiens.</p>
       </section>
+      <a href="index.html" class="btnKembali">Kembali ke Beranda</a>
     </main>
   </div>
 
@@ -348,4 +384,5 @@ Dengan kreativitas dan pemahaman konsep yang tepat, desain grafis mampu mempenga
   </footer>
 
 </body>
+
 </html>
